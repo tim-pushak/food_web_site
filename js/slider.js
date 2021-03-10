@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         hideTabContent();
                         showTabContent(i);
                     }
-                })
+                });
             }
         });
 });
