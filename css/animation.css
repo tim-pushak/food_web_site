@@ -21,3 +21,18 @@
         opacity: 1;
     }
 }
+
+
+.fade_modal {
+    animation-name: fade;
+    animation-duration: 0.1s;
+}
+
+@keyframes fade_modal {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
