@@ -14,6 +14,8 @@ window.addEventListener('DOMContentLoaded', () => {
             modalW.classList.toggle('show');
             
             document.body.style.overflow = 'hidden'; // аби сти не прокручувалось
+
+            clearInterval(modalTimerId); // коли юзер натисне на модалку швидше за таймер то вона сама вже не буде показуватись
         }
         open.addEventListener('click', openModal);
         open2.addEventListener('click', openModal);
@@ -43,4 +45,16 @@ window.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     });
+
+    const modalTimerId = setTimeout(openModal, 3000);
+
+
+    function showModalByScroll() {
+        if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+            openModal();
+            removeEventListener('scroll', showModalByScroll); // для того щоб при скролі в самий низ модалка тільки раз показувалась
+        }
+    }
+
+    window.addEventListener('scroll', showModalByScroll);
 });
