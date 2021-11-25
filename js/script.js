@@ -479,6 +479,9 @@ window.addEventListener('DOMContentLoaded', function() {
     getStaticInformation('.calculating__choose_big', 'calculating__choose-item_active');
 
 
+
+
+
     function getDynamicInformation(selector) {
         const input = document.querySelector(selector);
 
@@ -504,9 +507,4 @@ window.addEventListener('DOMContentLoaded', function() {
     getDynamicInformation('#height');
     getDynamicInformation('#weight');
     getDynamicInformation('#age');
-
-    
 });
-
-// (88.36 + (13.4 * weight) + (4.8 * height) - (5.7 * age)) * ratio // male
-// (447.6 + (9.2 * weight) + (3.1 * height) - (4.3 * age)) * ratio // female
